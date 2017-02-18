@@ -19,10 +19,13 @@ module.exports = (function(){
         req.on('data', function(chunk) {
             body.push(chunk);
         }).on('end', function() {
-            body = Buffer.concat(body).toString();
+            body = body.join('');
             // at this point, `body` has the entire request body stored in it as a string
+            try{
+                console.log('', JSON.parse(body));
+            }
+            catch(e){}
 
-            console.log('', body);
         });
 
         res.statusCode =  200;
