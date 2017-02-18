@@ -8,11 +8,21 @@ module.exports = (function(){
     var data = {};
 
     var server = http.createServer(function(req, res){
+        //
+        // console.log('req', {
+        //     url : req.url,
+        //     body : req.body,
+        //     req: req
+        // });
 
-        console.log('req', {
-            url : req.url,
-            body : req.body,
-            req: req
+        var body = [];
+        request.on('data', function(chunk) {
+            body.push(chunk);
+        }).on('end', function() {
+            body = Buffer.concat(body).toString();
+            // at this point, `body` has the entire request body stored in it as a string
+
+            console.log('', body);
         });
 
         res.statusCode =  200;
