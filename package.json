@@ -1,0 +1,15 @@
+{
+  "name": "mock-box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mock-server.js",
+  "scripts": {
+    "test": "node mock-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.bdap.enernoc.net/HoneyBadgers/mock-box.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
