@@ -24,7 +24,10 @@ module.exports = (function(){
             try{
                 console.log('', JSON.parse(body));
             }
-            catch(e){}
+            catch(e){
+                console.log('e.stack', e.stack);
+                console.log('body', body);
+            }
 
         });
 
