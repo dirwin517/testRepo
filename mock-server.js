@@ -16,7 +16,7 @@ module.exports = (function(){
         // });
 
         var body = [];
-        request.on('data', function(chunk) {
+        req.on('data', function(chunk) {
             body.push(chunk);
         }).on('end', function() {
             body = Buffer.concat(body).toString();
