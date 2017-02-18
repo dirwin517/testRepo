@@ -9,6 +9,11 @@ module.exports = (function(){
 
     var server = http.createServer(function(req, res){
 
+        console.log('req', {
+            url : req.url,
+            body : req.body
+        });
+
         res.statusCode =  200;
         res.setHeader('Content-Type', 'application/json');
 
