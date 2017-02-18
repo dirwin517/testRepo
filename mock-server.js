@@ -11,7 +11,8 @@ module.exports = (function(){
 
         console.log('req', {
             url : req.url,
-            body : req.body
+            body : req.body,
+            req: req
         });
 
         res.statusCode =  200;
